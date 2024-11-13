@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weather Search</title>
+  <style>
+    /* General Styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: #f0f4f8;
+  }
+  
+  /* Weather Container */
+  .weather-container {
+    text-align: center;
+    background-color: #fff;
+    padding: 20px;
+    width: 600px;
+    height: 300px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    
+  }
+  
+  .weather-container h2 {
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  /* Search Form */
+  .search-form {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .search-form input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    font-size: 1em;
+    border: 1px solid #ccc;
+    border-right: none;
+    border-radius: 4px 0 0 4px;
+    outline: none;
+  }
+  
+  .search-form button {
+    padding: 10px 15px;
+    font-size: 1em;
+    color: #fff;
+    background-color: purple;
+    border: none;
+    border-radius: 0 4px 4px 0;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .search-form button:hover {
+    background-color: #1d83e9;
+  }
+  
+  
+  .weather-result {
+    font-size: 1em;
+    color: #333;
+    margin-top: 10px;
+  }
+  
+  /* Weather Info Display */
+  .weather-info {
+    display: flex;
+    justify-content: space-between;
+   
+  }
+  
+  .weather-details p {
+    margin: 5px 0;
+    text-align: left;
+    font-weight: 600;
+   
+  }
+  
+  #city-name {
+    font-weight: 700;
+    font-size: 2.2em;
+    color: purple;
+  }
+  
+  .temp {
+    font-size: 3em;
+    color: #0c0c0c; 
+    font-weight: bolder;
+  }
+  
+  hr {
+    margin: 10px 0;
+    border: 0;
+    border-top: 1px solid #ccc;
+  }
+  
+  .note {
+    font-size: 0.9em;
+    color: #666;
+  }
+  
+  </style>
+</head>
+<body>
+  <div class="weather-container">    
+    <!-- Search Form -->
+    <form id="weather-form" class="search-form">
+      <input type="text" id="city-input" placeholder="Enter a city.." required>
+      <button type="submit" id="search-button">Search</button>
+    </form>
+    <br/><br/>
+    <!-- Weather Display Area -->
+    <div id="weather-result" class="weather-result">
+      
+      <div class="weather-info">
+        <div class="weather-details">
+          <p id="city-name">Paris</p>
+          <p id="date-time">Tuesday 07:45,  Moderate Rain</p>
+          <p id="humidity-wind">Humidity: <span style="color: red;">87%</span>; Wind: <span style="color: red;">72km/h</span></p>
+        </div>
+        <div class="temp">
+          <span id="temperature">🔆 24°C</span> 
+        </div>
+      </div>
+      <br/><br/>
+      <hr>
+      <p class="note">
+        This project was coded by <span style="color: purple; text-decoration: underline;">Vincent Mwendwa</span> 
+        and is <span style="color: purple; text-decoration: underline;">on GitHub</span> 
+        and hosted <span style="color: purple; text-decoration: underline;">on Netlify</span>.
+    </p>
+    </div>
+  </div>
+  
+</body>
+</html>
