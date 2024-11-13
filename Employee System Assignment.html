@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Employee Management System</title>
+  <style>
+    /* Resetting default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    height: 100vh;
+    color: #333;
+  }
+  
+  /* Sidebar styling */
+  .sidebar {
+    width: 350px;
+    background-color: #2c3e50;
+    color: #fff;
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .sidebar h2 {
+    margin-bottom: 20px;
+    font-size: 1.5em;
+  }
+  
+  .sidebar ul {
+    list-style-type: none;
+    width: 100%;
+  }
+  
+  .sidebar ul li {
+    width: 100%;
+  }
+  
+  .sidebar ul li a {
+    display: block;
+    color: #ecf0f1;
+    padding: 15px;
+    text-decoration: none;
+    font-size: 1.1em;
+    transition: background 0.3s ease;
+  }
+  
+  .sidebar ul li a:hover {
+    background-color: aqua;
+    color: black;
+  }
+  
+  /* Style for "ALLIANZ" */
+.allianz {
+    font-size: 60px;
+    color: #f7c600; /* Adjust color as desired */
+    text-decoration: underline;
+  }
+  
+  /* Style for "Management System" */
+  .management-system {
+    font-size: 0.8em; /* Makes it smaller; adjust as needed */
+  }
+
+  
+  /* Main content area styling */
+  .main-content {
+    flex: 1;
+    padding: 20px;
+    background-color: #ecf0f1;
+    overflow-y: auto;
+  }
+  
+  .main-content h1 {
+    font-size: 2em;
+    color: #2c3e50;
+    margin-bottom: 10px;
+  }
+  
+  .main-content p {
+    margin-bottom: 20px;
+  }
+  
+  .main-content section {
+    margin-bottom: 30px;
+  }
+  
+  .main-content section h2 {
+    color: #2980b9;
+    font-size: 1.5em;
+    margin-bottom: 10px;
+  }
+  
+  
+  
+  /* Responsive Design for Smaller Screens */
+  @media (max-width: 768px) {
+    .sidebar {
+      width: 100px;
+    }
+  
+    .sidebar h2 {
+      font-size: 1.2em;
+    }
+  
+    .sidebar ul li a {
+      font-size: 0.9em;
+      padding: 10px;
+    }
+  
+    .main-content {
+      padding: 10px;
+    }
+  
+    .main-content h1 {
+      font-size: 1.5em;
+     
+    }
+  
+    .main-content section h2 {
+      font-size: 1.2em;
+    }
+  }
+  
+  </style>
+</head>
+<body>
+
+  <!-- Sidebar for Navigation -->
+  <div class="sidebar">
+    <h2>
+        <span class="allianz">ALLIANZ</span> <span class="management-system">Management System</span>
+      </h2>
+      
+    <ul>
+      <li><a href="#register">Registration</a></li>
+      <li><a href="#login">Login</a></li>
+      <li><a href="#finance">Finance</a></li>
+      <li><a href="#departments">Departments</a></li>
+      <li><a href="#procurement">Procurement</a></li>
+      <li><a href="#leave">Leave</a></li>
+    </ul>
+  </div>
+
+
+  
+  <!-- Main Content Area -->
+  <div class="main-content">
+    <h1>The Employee Management System</h1>
+    <p>Select a module from the sidebar to view details.</p>
+
+    <!-- Example sections for each module -->
+    <section id="register">
+      <h2>Registration</h2>
+      <p>The Registration module enables the addition of new employees to the system, capturing personal details, contact information, job roles, and other essential data. It ensures easy onboarding and accurate record-keeping for all employees.
+
+      </p>
+    </section>
+
+    <section id="login">
+      <h2>Login</h2>
+      <p>Module for employee login.</p>
+    </section>
+
+    <section id="finance">
+      <h2>Finance</h2>
+      <p>The Finance module helps manage payroll, employee compensation, bonuses, and deductions. It also assists with budget tracking, expense reporting, and financial analysis, ensuring smooth salary distribution and financial transparency within the organization.</p>
+    </section>
+
+    <section id="departments">
+      <h2>Departments</h2>
+      <p>The Departments module organizes employees into relevant departments, making it easier to manage teams, assign roles, and oversee department-specific activities. It also supports inter-departmental communication and collaboration within the organization.</p>
+    </section>
+
+    <section id="procurement">
+      <h2>Procurement</h2>
+      <p>Module for handling procurement requests and tracking inventory.</p>
+    </section>
+
+    <section id="leave">
+      <h2>Leave</h2>
+      <p>The Leave module allows employees to submit leave requests, track available leave balances, and manage approvals. Managers can view schedules and make decisions that balance employee time-off requests with operational requirements.</p>
+    </section>
+  </div>
+
+</body>
+</html>
