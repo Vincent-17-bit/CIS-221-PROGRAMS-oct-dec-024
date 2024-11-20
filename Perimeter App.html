@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perimeter Calculator</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+        }
+        .form-group {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        label {
+            width: 100px;
+            margin-right: 
+        }
+        input {
+            padding: 5px;
+            border: none; 
+            outline: none; 
+            width: 150px; 
+        }
+        #result {
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Calculate Perimeter</h1>
+    <div class="form-group">
+        <label for="length">Length: </label>
+        <input type="number" id="length" name="length" oninput="calculatePerimeter()">
+    </div>
+
+    <div class="form-group">
+        <label for="width">Width:</label>
+        <input type="number" id="width" name="width" oninput="calculatePerimeter()">
+    </div>
+
+    <p id="perimeter">Perimeter: </p>
+    <p id="result">Thank you for using the Area Perimeter App!</p>
+
+    <script>
+        function calculatePerimeter() {
+            let length = parseFloat(document.getElementById("length").value);
+            let width = parseFloat(document.getElementById("width").value);
+            const resultElement = document.getElementById("perimeter");
+            const messageElement = document.getElementById("result");
+
+            if (isNaN(length) || isNaN(width)) {
+                resultElement.textContent = "Perimeter: ";
+                messageElement.style.visibility = "hidden";
+                return;
+            }
+
+            let perimeter = 2 * (length + width);
+            resultElement.textContent = "Perimeter: " + perimeter.toFixed(2);
+
+            // Show the result message if valid inputs are provided
+            messageElement.style.visibility = "visible";
+        }
+    </script>
+</body>
+</html>
